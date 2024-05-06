@@ -1,0 +1,167 @@
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    padding: 100px 0;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 33.3334%;
+    width: 100%;
+    margin: auto;
+    min-height: 120px;
+    background-color: white;
+    padding: 40px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 10px;
+    color: black;
+}
+
+.close {
+    position: absolute;
+    right: 18px;
+    top: 10px;
+    cursor: pointer;
+    font-size: 32px;
+    font-weight: 700;
+    z-index: 20;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+input[type="text"], input[type="password"] {
+    border: none;
+    font-size: 24px;
+    width: 100%;
+    background-color: white;
+}
+
+input:focus {
+    outline: none;
+}
+
+input:focus ~ .placeholder, input:not(input:placeholder-shown) ~ .placeholder {
+    transform: translateY(-28px);
+    font-size: 10px;
+}
+
+input:focus ~ .underline, input:not(input:placeholder-shown) ~ .underline {
+    transform: scaleX(1);
+}
+
+.form-row {
+    width: 100%;
+    padding-bottom: 4px;
+    border-bottom: 2px solid black;
+    position: relative;
+}
+
+.form-row .underline {
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #0070FB;
+    transform: scaleX(0);
+
+    transition: all .2s ease;
+}
+
+.form-row .placeholder {
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+    pointer-events: none;
+    font-size: 14px;
+
+    transition: all .2s ease;
+}
+
+.form-row.radio {
+    border: none;
+}
+
+
+.form-captcha {
+    display: flex;
+    gap: 20px;
+
+    align-items: flex-end;
+}
+
+
+.form-captcha-source {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.form-captcha-source img {
+    width: 200px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.form-captcha-source a {
+    text-decoration: none;
+}
+
+.form-captcha-input {
+    padding-bottom: 20px;
+}
+
+.form-submit-btn {
+    width: 100%;
+    font-size: 24px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    background: #0070FB;
+    color: white;
+    font-weight: 700;
+    border-radius: 10px;
+
+    transition: all .2s ease;
+}
+
+.form-submit-btn:hover {
+    background-color: #00469b;
+}
+
+.form-row-title {
+    font-weight: normal;
+    font-size: 24px;
+}
+
+.gender {
+    font-size: 14px;
+}
+
+.error {
+    color: red;
+    position: absolute;
+    left: 0;
+    bottom: -24px;
+}
+
+.form__title {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 24px;
+}

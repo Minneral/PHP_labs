@@ -1,0 +1,27 @@
+.list {
+    display: flex;
+    gap: 20px;
+}
+
+.list__item {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border: 2px solid black;
+}
+
+.users {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid black;
+}
